@@ -12,7 +12,7 @@ import os
 
 class migration():
     def __init__(self) -> None:
-        self.output_dir = "csv_exports"
+        self.output_dir = os.environ.get("OUTPUT_DIR")
         self.connect()
 
     # connect to mysql and create cursor and connection objects to use
