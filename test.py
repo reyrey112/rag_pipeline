@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from steps.abstracts_to_chunks import create_chunks
+from databricks_notebooks.abstracts_to_chunks import create_chunks
 import os
 load_dotenv()
 abstract_table = f"{os.environ.get("DATABRICKS_CATALOG")}.bronze.abstracts"
