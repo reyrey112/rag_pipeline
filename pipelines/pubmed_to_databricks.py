@@ -14,7 +14,6 @@ def run_pipeline(
     max_results: int = 500,
     meta_table: str = f"{os.environ.get("DATABRICKS_CATALOG")}.bronze.pubmed_meta",
     abstract_table: str = f"{os.environ.get("DATABRICKS_CATALOG")}.bronze.abstracts",
-    chunks_table: str = f"{os.environ.get("DATABRICKS_CATALOG")}.silver.chunks",
 ):
 
     print(f"Searching Pubmed for: '{query}'")
@@ -30,8 +29,6 @@ def run_pipeline(
     print("Uploading to databricks")
     write_to_delta_table(df, meta_table, abstract_table)
 
-    print("Creating Chunks from abstracts for RAG")
-    create_chunks(abstract_table, chunks_table)
     print("Pipeline Completed")
 
 
