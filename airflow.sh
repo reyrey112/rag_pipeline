@@ -14,6 +14,10 @@ else
     exit 1
 fi
 
+export DATABRICKS_HOST="$DATABRICKS_HOST"
+export DATABRICKS_HTTP_PATH="$DATABRICKS_HTTP_PATH"
+export DATABRICKS_TOKEN="$DATABRICKS_TOKEN"
+
 airflow connections add 'databricks_default' \
     --conn-type 'databricks' \
     --conn-host "$DATABRICKS_HOST" \
