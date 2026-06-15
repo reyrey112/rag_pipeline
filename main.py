@@ -1,6 +1,2 @@
-def main():
-    print("Hello from rag-pipeline!")
-
-
-if __name__ == "__main__":
-    main()
+from airflow.providers.databricks.operators.databricks import DatabricksRunNowOperator
+help(DatabricksRunNowOperator.__init__)
