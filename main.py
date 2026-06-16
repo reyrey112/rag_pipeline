@@ -1,2 +1,0 @@
-from airflow.providers.databricks.operators.databricks import DatabricksRunNowOperator
-help(DatabricksRunNowOperator.__init__)
