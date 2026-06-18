@@ -1,7 +1,6 @@
 from steps.pubmed_to_df import PubSearch
 from dotenv import load_dotenv
 from steps.df_to_delta_table import write_to_delta_table
-from databricks_notebooks.abstracts_to_chunks import create_chunks
 import os
 import argparse
 
