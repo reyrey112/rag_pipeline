@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from gemini_call import gemini_call
+from backend.legacy.gemini_call import gemini_call
 import os
 from dotenv import load_dotenv
 from databricks import sql
