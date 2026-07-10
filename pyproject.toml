@@ -7,40 +7,40 @@ requires-python = ">=3.13"
 
 # Truly shared — no heavy ML deps here
 dependencies = [
-    "databricks-sql-connector>=4.2.6",
+    "databricks-sql-connector>=4.3.0",
     "databricks-vectorsearch>=0.75",
-    "databricks-sdk>=0.114.0",
-    "python-dotenv>=1.0.0",
-    "google-genai>=2.8.0",
+    "databricks-sdk>=0.120.0",
+    "python-dotenv>=1.2.2",
+    "google-genai>=2.11.0",
     "requests>=2.34.2",
 ]
 
 [dependency-groups]
 # FastAPI container only
 api = [
-    "fastapi>=0.115.0",
-    "uvicorn>=0.34.0",
-    "pydantic>=2.0.0",
-    "httpx>=0.28.0",
-    "sentence-transformers>=5.5.1",  # moved here — Streamlit doesn't need it
+    "fastapi>=0.139.0",
+    "uvicorn>=0.51.0",
+    "pydantic>=2.13.4",
+    "httpx>=0.28.1",
+    "sentence-transformers>=5.6.0",  # moved here — Streamlit doesn't need it
 ]
 
 # Streamlit container only
 frontend = [
-    "streamlit>=1.58.0",
-    "httpx>=0.28.0",
+    "streamlit>=1.59.1",
+    "httpx>=0.28.1",
 ]
 
 # Data engineering — local only, never in Docker
 data-engineering = [
-    "apache-airflow>=3.2.2",
-    "apache-airflow-providers-databricks>=7.16.0",
+    "apache-airflow>=3.3.0",
+    "apache-airflow-providers-databricks>=7.16.1",
     "biopython>=1.87",
-    "delta-spark>=4.1.0",
-    "langchain>=1.3.7",
+    "delta-spark>=4.3.1",
+    "langchain>=1.3.12",
     "langchain-text-splitters>=1.1.2",
     "pyspark>=4.1.2",
-    "pyarrow>=24.0.0",
+    "pyarrow>=25.0.0",
 ]
 
 # Dev/testing — never in Docker
